@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,18 +21,16 @@ import org.cyanogenmod.hardware.util.FileUtils;
 public class TapToWake {
 
     private static String CONTROL_PATH = "/sys/devices/virtual/input/clearpad/wakeup_gesture";
-    private static boolean mEnabled = false;
 
     public static boolean isSupported() {
         return true;
     }
 
     public static boolean isEnabled()  {
-        return mEnabled;
+        return Integer.parseInt(FileUtils.readOneLine(CONTROL_PATH)) == 1;
     }
 
     public static boolean setEnabled(boolean state)  {
-        mEnabled = state;
-        return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
+        return FileUtils.writeLine(CONTROL_PATH, (state ? "1 1 0 0" : "1 0 0 0"));
     }
 }
