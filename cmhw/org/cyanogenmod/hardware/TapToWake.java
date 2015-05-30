@@ -20,17 +20,19 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class TapToWake {
 
-    private static String CONTROL_PATH = "/sys/devices/virtual/input/clearpad/wakeup_gesture";
+    private static String CONTROL_PATH = "/sys/devices/virtual/input/max1187x/power/wakeup";
+    private static boolean mEnabled = false;
 
     public static boolean isSupported() {
         return true;
     }
 
     public static boolean isEnabled()  {
-        return Integer.parseInt(FileUtils.readOneLine(CONTROL_PATH)) == 1;
+        return mEnabled;
     }
 
     public static boolean setEnabled(boolean state)  {
-        return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
+        mEnabled = state;
+        return FileUtils.writeLine(CONTROL_PATH, (state ? "enabled" : "disabled"));
     }
 }
