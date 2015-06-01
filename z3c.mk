@@ -29,16 +29,12 @@ PRODUCT_COPY_FILES += \
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
 # if the xhdpi doesn't exist.
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Device specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.device.rc:root/init.device.rc
-
-# USB function switching
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/init.sony.usb.rc:root/init.sony.usb.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
