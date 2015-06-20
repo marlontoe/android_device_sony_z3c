@@ -19,11 +19,9 @@ include device/sony/shinano-common/BoardConfigCommon.mk
 #-include vendor/sony/z3c/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D5803,D5833,z3c,aries
+TARGET_OTA_ASSERT_DEVICE := D5803,D5833,z3c
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/z3c/include
-
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/z3c/bluetooth
 
 BOARD_HARDWARE_CLASS += device/sony/z3c/cmhw
 
@@ -33,6 +31,10 @@ TARGET_KERNEL_CONFIG := cm_shinano_aries_defconfig
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 25
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688 # 12656259072 - 16384
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/sony/z3c/sepolicy
 
 # TWRP flags
 DEVICE_RESOLUTION := 720x1280
