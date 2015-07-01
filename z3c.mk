@@ -53,5 +53,5 @@ $(call inherit-product, vendor/sony/z3c/z3c-vendor.mk)
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 

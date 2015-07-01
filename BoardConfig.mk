@@ -37,4 +37,5 @@ BOARD_SEPOLICY_DIRS += \
     device/sony/z3c/sepolicy
 
 # TWRP flags
+RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 720x1280
