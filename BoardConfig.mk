@@ -36,13 +36,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688 # 12656259072 - 16384
 BOARD_SEPOLICY_DIRS += \
     device/sony/z3c/sepolicy
 
-# Quickboot
-PRODUCT_COPY_FILES += \
-    device/sony/z3c/prebuilt/QuickBoot.apk:system/app/QuickBoot/QuickBoot.apk
-
 # TWRP flags
 TW_THEME := portrait_hdpi
-#RECOVERY_VARIANT := twrp
+RECOVERY_VARIANT := twrp
 DEVICE_RESOLUTION := 720x1280
 RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_JB_CRYPTO := true
