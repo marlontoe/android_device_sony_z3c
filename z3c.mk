@@ -46,7 +46,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermanager.xml:system/etc/thermanager.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
+    $(LOCAL_PATH)/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device \
+    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
