@@ -38,7 +38,7 @@ BOARD_SEPOLICY_DIRS += \
 
 # TWRP
 RECOVERY_VARIANT := twrp
-TARGET_RECOVERY_FSTAB := device/sony/z3c/recovery/root/etc/twrp.fstab
+#TARGET_RECOVERY_FSTAB := device/sony/z3c/recovery/root/etc/twrp.fstab
 TARGET_NO_SEPARATE_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
