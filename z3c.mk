@@ -47,7 +47,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device \
-    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/recovery/root/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/recovery/root/sbin/bbootimg:recovery/root/sbin/bbootimg \
+    $(LOCAL_PATH)/recovery/root/sbin/zip:recovery/root/sbin/zip
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
