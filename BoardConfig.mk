@@ -63,7 +63,13 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_NO_USB_STORAGE := true
 TW_NO_SCREEN_BLANK := true
 
-# Multirom
-MR_DPI := hdpi
-MR_DPI_FONT := 216
-MR_KEXEC_MEM_MIN := 0x0ff00000
+# MultiROM
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/sony/z3c/multirom/init_devices.c
+MR_DPI := xhdpi
+MR_KEXEC_DTB := true
+MR_DPI_FONT := 340
+MR_FSTAB := device/sony/z3c/recovery/root/etc/twrp.fstab
+MR_USE_MROM_FSTAB := true
+MR_KEXEC_MEM_MIN := 0x20000000
+
