@@ -21,7 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
-$(call inherit-product, device/sony/shinano-common/device.mk)
+$(call inherit-product, device/sony/shinano/device.mk)
 $(call inherit-product, vendor/sony/aries/aries-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/system/etc/tfa98xx/TFA9890_Receiver.config:/system/etc/tfa98xx/TFA9890_Receiver.config \
     $(DEVICE_PATH)/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
     $(DEVICE_PATH)/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/sony/aries/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
 
 PRODUCT_NAME := aosp_d5803
 PRODUCT_DEVICE := aries
