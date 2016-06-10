@@ -45,6 +45,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_THEME := portrait_hdpi
 
 # TWRP Storage
 RECOVERY_SDCARD_ON_DATA := true
