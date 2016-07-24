@@ -63,3 +63,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Include non-opensource parts
 $(call inherit-product, vendor/sony/z3c/z3c-vendor.mk)
+
+# Copying files
+PRODUCT_COPY_FILES += \
+    device/sony/z3c/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
